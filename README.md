@@ -5,15 +5,15 @@ A simple cmake template for build project with shared library
 ## GCC Static Library linking
 Fixing the path of files (e.g. "../include/mylib.hpp" for mylib.cpp)
 ~~~
-g++ -o foo main.cpp src/mylib.cpp
+g++ -o foo examples/main.cpp mylib/src/mylib.cpp
 ./foo
 ~~~
 
 ## GCC Shared Library linking
 Fixing the path of files (e.g. "../include/mylib.hpp" for mylib.cpp)
 ~~~
-g++ -fpic -shared -o libfoo.so src/mylib.cpp
-g++ -o foo main.cpp -L. -lfoo
+g++ -fpic -shared -o libfoo.so mylib/src/mylib.cpp
+g++ -o foo examples/main.cpp -L. -lfoo
 ./foo
 ~~~
 ---
