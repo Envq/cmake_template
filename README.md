@@ -1,4 +1,5 @@
-# A simple cmake template
+# cmake template
+A simple cmake template for build project with shared library
 
 
 ## GCC Static Library linking
@@ -21,22 +22,7 @@ create the build directory and move into it
 ~~~
 mkdir -p build
 cd build/
-~~~
-Build library and install in /lib
-~~~
-cmake .. -DMODE=1
-make
-make install
-~~~
-Build executable and install in /bin
-~~~
-cd build/
-cmake .. -DMODE=2
-make
-make install
-~~~
-Execute executable:
-~~~
-../bin/foo.x
+cmake ..
+../bin/example.x
 ~~~
 Note: use "make rm" to clean project
